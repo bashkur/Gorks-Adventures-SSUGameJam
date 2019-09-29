@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     Vector2 input;
-    bool facing_right = false;
 
     private void Start()
     {
@@ -32,23 +31,18 @@ public class PlayerMovement : MonoBehaviour
 
         if (input != Vector2.zero)
         {
-            transform.Translate(new Vector3(input.x * move_speed * Time.deltaTime, input.y * move_speed * Time.deltaTime, 0f));
-            //rb.MovePosition(transform.position + )
+            rb.MovePosition(transform.position + new Vector3(input.x * move_speed * Time.deltaTime, input.y * move_speed * Time.deltaTime, 0f));
         }
-        animator.SetBool("is_walking_right", facing_right);
-
-
-        //animator.SetFloat("vertical", input.y);
+        animator.SetBool("horizontal", input.x != 0);
+        animator.SetBool("vertical", input.y > 0);
     }
+
 
     void Flip()
     {
-        Debug.Log("Flipped");
-
-        facing_right = !facing_right;
-        Vector3 player_scale = transform.localScale;
-        player_scale.x *= -1;
-        transform.localScale = player_scale;
-        animator.transform.Rotate(0, 180, 0);
+       
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 }
