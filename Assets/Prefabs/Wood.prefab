@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4483339701152019754}
   m_Layer: 0
   m_Name: Wood
-  m_TagString: Untagged
+  m_TagString: Material
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c6e6686ac08a741a81e4bc8b4afe17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changable: 1
+  changed: 0
 --- !u!50 &4483339701152019754
 Rigidbody2D:
   serializedVersion: 4
