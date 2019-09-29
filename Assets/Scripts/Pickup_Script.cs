@@ -12,13 +12,13 @@ public class Pickup_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -31,6 +31,10 @@ public class Pickup_Script : MonoBehaviour
         {
             changed = true;
         }
+        if (collision.gameObject.tag == "Pickups")
+        {
+            Debug.Log(gameObject.name + " collided with " + collision.gameObject.name);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,6 +42,18 @@ public class Pickup_Script : MonoBehaviour
         if (collision.gameObject.tag == "CraftingTable")
         {
             changable = false;
+        }
+
+        if (gameObject.tag == "Pickups" && collision.gameObject.name == "CraftTable")
+        {
+            Debug.Log("triggered");
+
+            Crafting_Script craft = collision.gameObject.GetComponent<Crafting_Script>();
+            if (craft != null)
+            {
+                craft.DoCraft(collision.gameObject);
+                //Destroy(collision.gameObject, 3.5f);
+            }
         }
     }
 
