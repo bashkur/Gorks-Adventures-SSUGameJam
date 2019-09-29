@@ -39,22 +39,25 @@ public class Pickup_Script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "CraftingTable")
+        if (collision.transform.tag == "CraftingTable")
         {
             changable = false;
-        }
 
-        if (gameObject.tag == "Pickups" && collision.gameObject.name == "CraftTable")
-        {
-            Debug.Log("triggered");
-
-            Crafting_Script craft = collision.gameObject.GetComponent<Crafting_Script>();
-            if (craft != null)
+            if (this.transform.tag == "Pickups")
             {
-                craft.DoCraft(collision.gameObject);
-                //Destroy(collision.gameObject, 3.5f);
+                Debug.Log("triggered");
+                collision.transform.GetComponent<Crafting_Script>().AddToTable(this.transform);
+
+                //Crafting_Script craft = collision.transform.GetComponent<Crafting_Script>();
+                //if (craft != null)
+                //{
+                //    craft.DoCraft(collision.transform);
+                //    //Destroy(collision.gameObject, 3.5f);
+                //}
             }
         }
+
+
     }
 
 }

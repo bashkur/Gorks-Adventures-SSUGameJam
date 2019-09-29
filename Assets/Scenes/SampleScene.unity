@@ -30714,7 +30714,7 @@ GameObject:
   - component: {fileID: 1303779133}
   m_Layer: 0
   m_Name: CraftTable
-  m_TagString: Untagged
+  m_TagString: CraftingTable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30878,9 +30878,9 @@ GameObject:
   - component: {fileID: 2032573131}
   - component: {fileID: 2032573130}
   - component: {fileID: 2032573134}
-  - component: {fileID: 2032573133}
   - component: {fileID: 2032573132}
   - component: {fileID: 2032573135}
+  - component: {fileID: 2032573133}
   - component: {fileID: 2032573136}
   m_Layer: 0
   m_Name: Player
