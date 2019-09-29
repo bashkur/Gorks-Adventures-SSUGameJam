@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Crafting_Script : MonoBehaviour
 {
-    public GameObject stone, vine, wood;
+    public GameObject stone, vine, wood, spear;
+    public Sprite[] sprites;
 
     private int stone_count, vine_count, wood_count;
 
@@ -44,14 +45,36 @@ public class Crafting_Script : MonoBehaviour
         }
     }
 
+    // check if any mat has been changed
+    // if yes, then instantiate a random item
+    // otherwise, make a spear
     public void DoCraft()
     {
-        Debug.Log("crafting...");
-        foreach(Transform child in this.transform)
+        bool make_random = false;
+        foreach (Transform child in this.transform)
         {
+            if(child.hasChanged)
+                make_random = true;
             Debug.Log("destroying " + child.name);
-            Destroy(child.gameObject, 2f);
+            Destroy(child.gameObject);
         }
+
+        if (make_random)
+        {
+            int unlucky_num = Random.Range(1, sprites.Length);
+            Debug.Log("crafting  random... unlucky number is " + unlucky_num);
+            GameObject trash = new GameObject("Trash", typeof(SpriteRenderer));
+            trash.GetComponent<SpriteRenderer>().sprite = sprites[unlucky_num];
+            trash.GetComponent<SpriteRenderer>().sortingOrder = 2;
+            trash.transform.position = new Vector2(0, 0);
+
+        }
+        else
+        {
+            Debug.Log("crafting spear...");
+            Instantiate(spear, new Vector2(0, 0), Quaternion.identity);
+        }
+
         stone_count = 0;
         vine_count = 0;
         wood_count = 0;
