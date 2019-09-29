@@ -25,27 +25,49 @@ public class Gork_script : MonoBehaviour
     void findMat()
     {
         GameObject[] matList = GameObject.FindGameObjectsWithTag("Material");
+        int i = 0;
+        target = matList[i];
 
-        target = matList[Random.Range(0, matList.Length - 1)];
-
-        while (target.transform.GetComponent<Pickup_Script>().changed || !target.transform.GetComponent<Pickup_Script>().changable )
+        while ((target.transform.GetComponent<Pickup_Script>().changed || !target.transform.GetComponent<Pickup_Script>().changable) && i < matList.Length )
         {
-            target = matList[Random.Range(0, matList.Length - 1)];
+            target = matList[i++];
+        }
+        if (i >= matList.Length)
+        {
+            target = GameObject.FindGameObjectWithTag("Player");
+            StartCoroutine(ChasePlayer());
+        }
+        else
+        {
+            StartCoroutine(MoveToTarget());
+        }
+    }
+
+    IEnumerator ChasePlayer()
+    {
+        Vector2 startpos = transform.position;
+        for (float inc = 0;inc >= 1; inc += .001f)
+        {
+
+            transform.position = Vector2.Lerp(startpos, target.transform.position, inc);
+            yield return null;
+
         }
 
-        StartCoroutine(MoveToTarget());
+        print("gotcha");
     }
 
     IEnumerator MoveToTarget()
     {
-        print(target);
-        for (; !target.transform.GetComponent<Pickup_Script>().changed;)
+        Vector2 startpos = transform.position;
+        for (float inc= 0; !target.transform.GetComponent<Pickup_Script>().changed; inc += .001f )
         {
 
-            transform.position = Vector2.Lerp(transform.position, target.transform.position, .005f);
+            transform.position = Vector2.Lerp(startpos, target.transform.position, inc);
             yield return null;
 
         }
+        yield return new WaitForSeconds(5);
         findMat();
     }
 }
