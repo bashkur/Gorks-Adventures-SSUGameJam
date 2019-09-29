@@ -7,11 +7,6 @@ public class Gork_script : MonoBehaviour
     GameObject target;
     int timesThrough = 0;
 
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -59,6 +54,7 @@ public class Gork_script : MonoBehaviour
 
     IEnumerator MoveToTarget()
     {
+        print("changeable? " + target.transform.GetComponent<Pickup_Script>().changable);
         Vector2 startpos = transform.position;
         for (float inc= 0; !target.transform.GetComponent<Pickup_Script>().changed; inc += .001f )
         {

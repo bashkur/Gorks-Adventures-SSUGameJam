@@ -18,16 +18,5 @@ public class Ground_Script : MonoBehaviour
             pickupList.Add(Instantiate(woodpre, new Vector2(rand.Next(40) - 20, rand.Next(40) - 25), Quaternion.identity));
             pickupList.Add(Instantiate(vinepre, new Vector2(rand.Next(40) - 20, rand.Next(40) - 25), Quaternion.identity));
         }
-
-        foreach (var item in pickupList)
-        {
-            item.transform.tag = "Pickups";
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

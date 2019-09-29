@@ -16,10 +16,10 @@ public class Crafting_Script : MonoBehaviour
         wood_count = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
+        if (stone_count > 0 && vine_count > 0 && wood_count > 0)
+            DoCraft();
     }
 
     public void AddToTable(Transform other)
@@ -27,34 +27,26 @@ public class Crafting_Script : MonoBehaviour
         Debug.Log(other.name + " was added to table");
         other.transform.parent = this.transform;
 
-        if (stone_count > 0 && vine_count > 0 && wood_count > 0)
-            DoCraft();
-
-        if (other.name == "Stone")
+        if (other.name == "Stone(Clone)")
         {
             stone_count++;
             Debug.Log("Stone count: " + stone_count);
         }
-        if (other.name == "Vine")
+        if (other.name == "Vines(Clone)")
         {
             vine_count++;
-            Debug.Log("Vine count: " + stone_count);
-
+            Debug.Log("Vine count: " + vine_count);
         }
-        if (other.name == "Wood")
+        if (other.name == "Wood(Clone)")
         {
             wood_count++;
-            Debug.Log("Wood count: " + stone_count);
-
+            Debug.Log("Wood count: " + wood_count);
         }
-
-
-
     }
 
     public void DoCraft()
     {
-        Debug.Log("crafring...");
+        Debug.Log("crafting...");
         foreach(Transform child in this.transform)
         {
             Debug.Log("destroying " + child.name);
