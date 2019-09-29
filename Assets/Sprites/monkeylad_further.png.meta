@@ -1,0 +1,532 @@
+fileFormatVersion: 2
+guid: b27cde082f231ca4f8c3eac036e49d3a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5396743096456139633
+    second: idle
+  - first:
+      213: 3437089085549991856
+    second: snail_0
+  - first:
+      213: -1414141398005557628
+    second: monkeylad_further_2
+  - first:
+      213: 3678218842936642755
+    second: monkeylad_further_3
+  - first:
+      213: 6388604437332322970
+    second: monkeylad_further_4
+  - first:
+      213: 1305470088654913489
+    second: monkeylad_further_5
+  - first:
+      213: -7889879297885775642
+    second: monkeylad_further_6
+  - first:
+      213: 6618137650432959830
+    second: monkeylad_further_7
+  - first:
+      213: -757215924695959776
+    second: walking_0
+  - first:
+      213: -4146424618891277075
+    second: walking_1
+  - first:
+      213: 6767872593662600197
+    second: walking_2
+  - first:
+      213: -34773490448487487
+    second: walking_3
+  - first:
+      213: -994919804728958748
+    second: walking_4
+  - first:
+      213: 1402373646583875427
+    second: monkeylad_further_13
+  - first:
+      213: 8961792255149379427
+    second: running_1
+  - first:
+      213: -4284759074956293141
+    second: monkeylad_further_15
+  - first:
+      213: -1519294178765519468
+    second: monkeylad_further_16
+  - first:
+      213: 8225067440596638881
+    second: monkeylad_further_17
+  - first:
+      213: 5601963176109602263
+    second: snail_1
+  - first:
+      213: 3941279101187628374
+    second: monkeylad_further_19
+  - first:
+      213: 2345931890381357933
+    second: melon
+  - first:
+      213: 6690602311123930833
+    second: cherry
+  - first:
+      213: -2402529513482360685
+    second: banana
+  - first:
+      213: 2487944616285424721
+    second: monkeylad_further_23
+  - first:
+      213: 6584356095258147167
+    second: monkeylad_further_24
+  - first:
+      213: 1803465954166119630
+    second: monkeylad_further_25
+  - first:
+      213: 93700734562964855
+    second: monkeylad_further_26
+  - first:
+      213: 5410686299461088363
+    second: monkeylad_further_27
+  - first:
+      213: -2845036658076699421
+    second: monkeylad_further_28
+  - first:
+      213: -2532616760419898249
+    second: monkeylad_further_29
+  - first:
+      213: -887076027074535660
+    second: monkeylad_further_30
+  - first:
+      213: 5486193294990390567
+    second: monkeylad_further_31
+  - first:
+      213: -8325632062232064158
+    second: monkeylad_further_32
+  - first:
+      213: 4790982064702797702
+    second: monkeylad_further_33
+  - first:
+      213: -7276425066259052887
+    second: monkeylad_further_34
+  - first:
+      213: -5724824630137362012
+    second: monkeylad_further_35
+  - first:
+      213: -3663125742824866708
+    second: monkeylad_further_36
+  - first:
+      213: 6722953386773863464
+    second: monkeylad_further_37
+  - first:
+      213: 1250286383453380257
+    second: walking_5
+  - first:
+      213: -1129278912610544731
+    second: walking_6
+  - first:
+      213: -7318767380291708578
+    second: walking_7
+  - first:
+      213: -1274967292748549190
+    second: running_0
+  - first:
+      213: 5396743096456139633
+    second: monkeylad_further_0
+  - first:
+      213: -4397088603072257566
+    second: monkey_dead
+  - first:
+      213: 8130477326818896572
+    second: peach
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: walking_0
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 792
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed11a54f0e2f404fa9a502071c62c71
+      internalID: -757215924695959776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 792
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fd40510b7cb824b8b23f6632f18cf1
+      internalID: -4146424618891277075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_2
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 792
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3b17e5e73a959439050dfa623113ec
+      internalID: 6767872593662600197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 792
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f2630060ed03c448c9b1401e8cda72
+      internalID: -34773490448487487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_4
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 792
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998bf29a52c3ca84bac106d19b8aaecc
+      internalID: -994919804728958748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: running_1
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 792
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab56f1e378bff749afdb9ac57dd4cf5
+      internalID: 8961792255149379427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snail_1
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeeea1a5a2f3b2d49a1ecd5e3483cbc9
+      internalID: 5601963176109602263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 792
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619b4da5ab2438048bce43a47a80996f
+      internalID: 5396743096456139633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_5
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 792
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355f1cacef1b52b4284b425585abcd87
+      internalID: 1250286383453380257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_6
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 792
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8836b66cd459a304988a95aac9d6ae5a
+      internalID: -1129278912610544731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_7
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 792
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf9cc0bb9ae03545b887be284e8d173
+      internalID: -7318767380291708578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: running_0
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 792
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1aa6762e05c580408baf00b11b0bd38
+      internalID: -1274967292748549190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: snail_0
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee37803b618dce7499bbf1772b746941
+      internalID: 3437089085549991856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_dead
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 768
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517d01ce537fc7d44b42d288585259cf
+      internalID: -4397088603072257566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
