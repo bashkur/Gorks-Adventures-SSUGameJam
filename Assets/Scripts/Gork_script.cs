@@ -6,6 +6,7 @@ public class Gork_script : MonoBehaviour
 {
     GameObject target;
     int timesThrough = 0;
+    public int times_hit = 0;
 
     // Update is called once per frame
     void Update()
@@ -15,6 +16,12 @@ public class Gork_script : MonoBehaviour
             findMat();
         }
         timesThrough++;
+
+        if (times_hit >= 3)
+        {
+            Destroy(this);
+            Application.Quit();
+        }
     }
 
     void findMat()

@@ -7,16 +7,21 @@ public class PlayerMovement : MonoBehaviour
     public float move_speed = 5f;
     public Rigidbody2D rb;
     public Animator animator;
+    public bool have_spear = false;
+
     //Pickup_Script pickups;
-    Pickup_Script pickups;
+
+    public GameObject spear, gork;
+
 
     Vector2 input;
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        pickups = GetComponent<Pickup_Script>();
+        //pickups = GetComponent<Pickup_Script>();
     }
 
     // Update is called once per frame
@@ -25,6 +30,11 @@ public class PlayerMovement : MonoBehaviour
         // input
         input.x = Input.GetAxis("Horizontal");
         input.y = Input.GetAxis("Vertical");
+
+        if(Input.GetKeyUp(KeyCode.R) && have_spear)
+        {
+            Poke();
+        }
     }
 
     private void FixedUpdate()
@@ -46,5 +56,13 @@ public class PlayerMovement : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    void Poke()
+    {
+        //Collider2D[] collider2Ds = Physics2D.OverlapCircle(gork.transform.position, 3f);
+        float dist = Vector2.Distance(transform.position, gork.transform.position);
+        if (dist < 3f)
+            gork.GetComponent<Gork_script>().times_hit++;
     }
 }

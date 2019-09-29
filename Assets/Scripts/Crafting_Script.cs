@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Crafting_Script : MonoBehaviour
 {
-    public GameObject stone, vine, wood, spear;
+    public GameObject stone, vine, wood, spear, player;
     public Sprite[] sprites;
 
     private int stone_count, vine_count, wood_count;
@@ -55,8 +55,6 @@ public class Crafting_Script : MonoBehaviour
         {
             if(child.hasChanged)
                 make_random = true;
-            Debug.Log("destroying " + child.name);
-            Destroy(child.gameObject);
         }
 
         if (make_random)
@@ -73,6 +71,15 @@ public class Crafting_Script : MonoBehaviour
         {
             Debug.Log("crafting spear...");
             Instantiate(spear, new Vector2(0, 0), Quaternion.identity);
+            spear.transform.parent = player.transform;
+            spear.transform.position = player.transform.forward;
+            player.GetComponent<PlayerMovement>().have_spear = true;
+        }
+
+        foreach (Transform child in this.transform)
+        {
+            Debug.Log("destroying " + child.name);
+            Destroy(child.gameObject);
         }
 
         stone_count = 0;
