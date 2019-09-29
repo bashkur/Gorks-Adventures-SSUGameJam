@@ -12,6 +12,7 @@ public class Crafting_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spear.SetActive(false);
         stone_count = 0;
         vine_count = 0;
         wood_count = 0;
@@ -51,13 +52,14 @@ public class Crafting_Script : MonoBehaviour
     public void DoCraft()
     {
         bool make_random = false;
-        foreach (Transform child in this.transform)
+        for(int i = 0; i < transform.childCount; i++)
         {
-            if(child.hasChanged)
+            if (this.transform.GetChild(i).GetComponent<Pickup_Script>().changed == true)
                 make_random = true;
         }
+        Debug.Log("craft random? " + make_random);
 
-        if (make_random)
+        if (make_random == true)
         {
             int unlucky_num = Random.Range(1, sprites.Length);
             Debug.Log("crafting  random... unlucky number is " + unlucky_num);
@@ -67,19 +69,31 @@ public class Crafting_Script : MonoBehaviour
             trash.transform.position = new Vector2(0, 0);
 
         }
-        else
+        if(make_random == false)
         {
             Debug.Log("crafting spear...");
-            Instantiate(spear, new Vector2(0, 0), Quaternion.identity);
-            spear.transform.parent = player.transform;
-            spear.transform.position = player.transform.forward;
+            spear.SetActive(true);
             player.GetComponent<PlayerMovement>().have_spear = true;
+            spear.transform.parent = player.transform;
+            spear.transform.position = player.transform.position;
+
+
+            //Vector2 startpos = spear.transform.position;
+            //spear.transform.position = Vector2.Lerp(startpos, player.transform.position, 0.1f);
+
+            //for (float inc = 0; inc >= 1; inc += .001f)
+            //{
+
+            //}
+            //Vector2.Lerp(spear.transform.position, player.transform.position, 0.5f);
+            //spear.transform.Translate(spear.transform.position + player.transform.position)
         }
 
         foreach (Transform child in this.transform)
         {
             Debug.Log("destroying " + child.name);
-            Destroy(child.gameObject);
+            child.parent = null;
+            Destroy(child.gameObject, 1f);
         }
 
         stone_count = 0;

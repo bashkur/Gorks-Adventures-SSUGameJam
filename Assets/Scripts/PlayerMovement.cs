@@ -31,9 +31,13 @@ public class PlayerMovement : MonoBehaviour
         input.x = Input.GetAxis("Horizontal");
         input.y = Input.GetAxis("Vertical");
 
-        if(Input.GetKeyUp(KeyCode.R) && have_spear)
+        if(Input.GetMouseButtonDown(0) && have_spear)
         {
             Poke();
+        }
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            Application.Quit();
         }
     }
 
@@ -60,9 +64,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Poke()
     {
-        //Collider2D[] collider2Ds = Physics2D.OverlapCircle(gork.transform.position, 3f);
         float dist = Vector2.Distance(transform.position, gork.transform.position);
+        Debug.Log("Poking dist = " + dist);
         if (dist < 3f)
-            gork.GetComponent<Gork_script>().times_hit++;
+            gork.GetComponent<Gork_script>().times_hit += 1;
     }
 }
