@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float move_speed = 5f;
     public Rigidbody2D rb;
     public Animator animator;
+    //Pickup_Script pickups;
+    Pickup_Script pickups;
 
     Vector2 input;
 
@@ -14,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        pickups = GetComponent<Pickup_Script>();
     }
 
     // Update is called once per frame
