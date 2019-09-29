@@ -30,17 +30,15 @@ public class PlayerMovement : MonoBehaviour
         if ((input.x > 0f && this.transform.localScale.x != 1) || (input.x < 0f && this.transform.localScale.x != -1))
             Flip();
 
-        if (input.x != 0)
+        if (input != Vector2.zero)
         {
-            transform.Translate(new Vector3(input.x * move_speed * Time.deltaTime, 0f, 0f));
+            transform.Translate(new Vector3(input.x * move_speed * Time.deltaTime, input.y * move_speed * Time.deltaTime, 0f));
+            //rb.MovePosition(transform.position + )
         }
-        if (input.y != 0)
-        {
-            transform.Translate(new Vector3(0f, input.y * move_speed * Time.deltaTime, 0f));
-        }
+        animator.SetBool("is_walking_right", facing_right);
 
-        animator.SetFloat("horizontal", input.x);
-        animator.SetFloat("vertical", input.y);
+
+        //animator.SetFloat("vertical", input.y);
     }
 
     void Flip()
@@ -51,5 +49,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 player_scale = transform.localScale;
         player_scale.x *= -1;
         transform.localScale = player_scale;
+        animator.transform.Rotate(0, 180, 0);
     }
 }
