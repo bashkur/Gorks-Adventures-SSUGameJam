@@ -7,6 +7,7 @@ TagManager:
   - Map
   - CraftingTable
   - Bug
+  - Pickups
   layers:
   - Default
   - TransparentFX

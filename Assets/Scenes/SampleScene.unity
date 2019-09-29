@@ -30714,7 +30714,7 @@ GameObject:
   - component: {fileID: 1303779133}
   m_Layer: 0
   m_Name: CraftTable
-  m_TagString: Untagged
+  m_TagString: CraftingTable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30794,6 +30794,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b86ba3036dd2914988f918290a465c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stone: {fileID: 5573995179309783409, guid: ff8d22f4387637448b4400b8107c83e3, type: 3}
+  vine: {fileID: 8163297051737669481, guid: d673cde25fc45f242b28a195ca06fb89, type: 3}
+  wood: {fileID: 7596007320205720277, guid: 51e83992d49197e4885ec9cfb71d0003, type: 3}
 --- !u!61 &1303779134
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30875,9 +30878,9 @@ GameObject:
   - component: {fileID: 2032573131}
   - component: {fileID: 2032573130}
   - component: {fileID: 2032573134}
-  - component: {fileID: 2032573133}
   - component: {fileID: 2032573132}
   - component: {fileID: 2032573135}
+  - component: {fileID: 2032573133}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player

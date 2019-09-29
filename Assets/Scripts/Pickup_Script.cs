@@ -9,36 +9,31 @@ public class Pickup_Script : MonoBehaviour
     [HideInInspector]
     public bool changed = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Map")
+        if (this.gameObject.tag != "Player" && collision.gameObject.tag == "Map")
         {
             transform.position = transform.position + new Vector3(1, 1, 0);
         }
-        if (collision.gameObject.tag == "Bug")
+        if (this.gameObject.tag != "Player" && collision.gameObject.tag == "Bug")
         {
             changed = true;
+        }
+        if (this.gameObject.tag != "Player" && collision.gameObject.tag == "Material")
+        {
+            Debug.Log(gameObject.name + " collided with " + collision.gameObject.name);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "CraftingTable")
+        if (collision.transform.tag == "CraftingTable")
         {
             changable = false;
+            collision.transform.GetComponent<Crafting_Script>().AddToTable(this.transform);
         }
+
+
     }
 
 }
