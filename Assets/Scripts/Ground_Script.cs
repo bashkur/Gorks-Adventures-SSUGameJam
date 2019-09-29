@@ -11,11 +11,13 @@ public class Ground_Script : MonoBehaviour
 
     void Start()
     {
+        System.Random rand = new System.Random();
         for(int i = 0; i < 2; i++)
         {
-            pickupList.Add(Instantiate(rockpre,new Vector2(i, 0),Quaternion.identity));
-            pickupList.Add(Instantiate(woodpre, new Vector2(i + 1, 0), Quaternion.identity));
-            pickupList.Add(Instantiate(vinepre, new Vector2(i + 2, 0), Quaternion.identity));
+            
+            pickupList.Add(Instantiate(rockpre,new Vector2(rand.Next(40) - 20, rand.Next(40) - 25), Quaternion.identity));
+            pickupList.Add(Instantiate(woodpre, new Vector2(rand.Next(40) - 20, rand.Next(40) - 25), Quaternion.identity));
+            pickupList.Add(Instantiate(vinepre, new Vector2(rand.Next(40) - 20, rand.Next(40) - 25), Quaternion.identity));
         }
     }
 
