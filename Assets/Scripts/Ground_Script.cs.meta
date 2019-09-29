@@ -3,7 +3,13 @@ guid: 04ab0394b1eab81409f5e8860c7a2c19
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rockpre: {fileID: 5573995179309783409, guid: ff8d22f4387637448b4400b8107c83e3,
+      type: 3}
+  - woodpre: {fileID: 7596007320205720277, guid: 51e83992d49197e4885ec9cfb71d0003,
+      type: 3}
+  - vinepre: {fileID: 8163297051737669481, guid: d673cde25fc45f242b28a195ca06fb89,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
