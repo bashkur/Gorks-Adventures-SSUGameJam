@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     Vector2 input;
-    Vector3 h, v;
     bool facing_right = false;
 
     private void Start()
@@ -28,20 +27,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if ((input.x > 0f && this.transform.localScale.x != 1) || (input.x < 0f && this.transform.localScale.x != -1))
+            Flip();
+
         if (input.x != 0)
         {
             transform.Translate(new Vector3(input.x * move_speed * Time.deltaTime, 0f, 0f));
-
-            if (input.x > 0 && !facing_right)
-            {
-                Flip();
-                //facing_right = true;
-            }
-            else if (input.x < 0 && facing_right)
-            {
-                Flip();
-                //facing_right = false;
-            }
         }
         if (input.y != 0)
         {
@@ -54,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Flip()
     {
+        Debug.Log("Flipped");
+
         facing_right = !facing_right;
         Vector3 player_scale = transform.localScale;
         player_scale.x *= -1;
